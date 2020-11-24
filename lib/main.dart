@@ -18,6 +18,7 @@ class Home {
         body: Center(
           child: GestureDetector(
             onTap: () {
+              dismissAllToast();
               showToast(
                 getRandomMessage(),
                 position: ToastPosition.bottom,
