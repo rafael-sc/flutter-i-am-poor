@@ -19,7 +19,7 @@ class Home {
           child: GestureDetector(
             onTap: () {
               showToast(
-                "I am poor",
+                getRandomMessage(),
                 position: ToastPosition.bottom,
               );
             },
@@ -31,6 +31,11 @@ class Home {
       ),
     ));
   }
+
+  String getRandomMessage() {
+    var messages=['I am poor','I\'m poor', 'You are poor'];
+    return (messages..shuffle()).first;
+  }
 }
 
 class DefaultAppBar {
@@ -41,3 +46,5 @@ class DefaultAppBar {
     );
   }
 }
+
+
